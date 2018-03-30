@@ -1,7 +1,292 @@
 .header {
   background: linear-gradient(to bottom right, #093A7A, #0B3C7D);
+  display: flex;
+  font-weight: normal;
+  font-size: 14px;
+  height: 58px;
+  position: fixed;
+  width: 100%;
 }
 
-.active {
+.logo {
+  margin-left: 16px;
+  width: 135px;
+}
+
+.main-container {
+  background-color: #F4F4F4;
+  margin-top: 58px;
+  padding: 0 10px;
+}
+
+.filters {
+  align-items: flex-start;
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  height: 40px;
+  margin-left: -10px;
+  position: fixed;
+  width: 100%;
+}
+
+.button {
+  background-color: #002C77;
+  border-bottom: 2px solid #00163C;
+  border-radius: 5px;
+  color: #FFF;
+}
+
+.filter-button {
+  height: 30px;
+}
+
+.checkbox {
+
+}
+
+.checkbox-input {
+    width: auto;
+}
+
+.title {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  justify-content: center;
+}
+
+.section-title {
+  font-weight: bold;
+  color: #157AB1;
+  margin-bottom: 20px;
+}
+
+.title-text {
+  color: #157AB1;
+  font-weight: bold;
+  margin: auto;
+}
+
+.allStars-label {
+  font-size: 13px;
+}
+
+.title-text--desktop,
+.starsFilter,
+.hotelFilter {
+  display: none;
+}
+
+.starsFilter,
+.hotelFilter,
+.title {
+  background-color: #FFF;
+  width: 100%;
+}
+
+.hotels {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 58px;
+}
+
+.hotel {
+  background-color: #FFF;
+  border-radius: 5px;
+  display: grid;
+  list-style-type: none;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px 10px 40px 10px;
+}
+
+.hotel-image {
+  height: 196px;
+  width: 100%;
+}
+
+.hotel-section1 {
+  margin-top: 15px;
+}
+
+.hotel-name {
+  color: #157AB1;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.hotel-stars {
+  margin-top: 18px;
+}
+
+.icon-amenity {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.hotel-amenities {
+  margin-top: 15px;
+}
+
+.hotel-section2 {
+  border-top: 1px dashed #777;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.hotel-price-msg {
+  font-size: 12px;
+  color: #444;
+  margin-top: 22px;
+}
+
+.hotel-price {
+  font-size: 28px;
+  color: #df6800;
+  margin-top: 22px;
+}
+
+.hotel-button {
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.icon-star-orange {
+  color: #FDBA12;
+}
+
+/** states*/
+.filterActive {
   height: 100%;
+}
+
+.filterActive .starsFilter {
+  display: block;
+  padding: 20px;
+}
+
+.filterActive .hotelFilter {
+  display: block;
+  padding: 20px;
+}
+
+
+/** Responsive */
+
+@media only screen and (min-width: 1024px) {
+  .main-container {
+    display: flex;
+    margin-top: 80px;
+    padding: 24px;
+  }
+
+  .logo {
+      width: 230px;
+  }
+
+  .header {
+    height: 80px;
+  }
+
+  .filters {
+    position: fixed;
+  }
+
+  .title-text {
+    display: none;
+  }
+
+  .title {
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+    padding-left: 10px;
+  }
+
+  .hotel-input {
+    max-width: 160px;
+  }
+
+  .hotelFilter {
+    margin-bottom: 5px;
+    padding: 10px;
+  }
+
+  .section-title {
+    margin-bottom: 10px;
+  }
+
+  .starsFilter {
+    padding: 10px;
+  }
+
+  .hotels {
+    margin:  0 0 0 calc(25% + 16px);
+  }
+
+  .hotel {
+    display: flex;
+    padding: 10px;
+  }
+
+  .hotel-section1 {
+    flex-grow: 1;
+    margin: 0 0 0 10px;
+  }
+
+  .hotel-section2 {
+    border-top: none;
+    border-left: 1px dashed #777;
+    height: 100%;
+    min-width: 180px;
+    margin: 0;
+    padding-left: 10px;
+  }
+
+  .hotel-price-msg {
+    margin: 22px auto ;
+    width: 70%;
+  }
+
+  .hotel-image {
+    height: 195px;
+    width: 288px;
+  }
+
+  .title-text--desktop {
+    font-weight: bold;
+    color: #444;
+  }
+
+  .title-text--desktop,
+  .starsFilter,
+  .hotelFilter {
+    display: initial;
+  }
+}
+
+/** Grid System */
+
+[class*="col-"] {
+    width: 100%;
+}
+
+/* For desktop: */
+@media only screen and (min-width: 1024px) {
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
 }

@@ -40,3 +40,111 @@ q:before,q:after {
 }
 abbr,acronym { border:0;
 }
+
+
+
+/**fonts*/
+.root {
+    display: flex;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/assets/fonts/icons.eot?a1mh7p');
+  src:  url('/assets/fonts/icons.eot?a1mh7p#iefix') format('embedded-opentype'),
+    url('/assets/fonts/icons.ttf?a1mh7p') format('truetype'),
+    url('/assets/fonts/icons.woff?a1mh7p') format('woff'),
+    url('/assets/fonts/icons.svg?a1mh7p#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\e900";
+}
+.icon-star:before {
+  content: "\e901";
+}
+.icon-bathrobes:before {
+  content: "\e902";
+  color: #59595c;
+}
+.icon-bathtub:before {
+  content: "\e903";
+  color: #595858;
+}
+.icon-beach:before {
+  content: "\e904";
+  color: #595858;
+}
+.icon-beach-pool-facilities:before {
+  content: "\e905";
+  color: #595858;
+}
+.icon-business-center:before {
+  content: "\e906";
+  color: #595858;
+}
+.icon-children-club:before {
+  content: "\e907";
+  color: #595858;
+}
+.icon-coffe-maker:before {
+  content: "\e908";
+  color: #595858;
+}
+.icon-deep-soaking-bathtub:before {
+  content: "\e909";
+  color: #595858;
+}
+.icon-fitness-center:before {
+  content: "\e90a";
+  color: #5a5a5d;
+}
+.icon-garden:before {
+  content: "\e90b";
+  color: #595858;
+}
+.icon-kitchen-facilities:before {
+  content: "\e90c";
+  color: #595858;
+}
+.icon-newspaper:before {
+  content: "\e90d";
+  color: #595858;
+}
+.icon-nightclub:before {
+  content: "\e90e";
+  color: #59595c;
+}
+.icon-restaurant:before {
+  content: "\e90f";
+  color: #595858;
+}
+.icon-safety-box:before {
+  content: "\e910";
+  color: #59595c;
+}
+.icon-separate-bredroom:before {
+  content: "\e911";
+  color: #595858;
+}
+.icon-sheets:before {
+  content: "\e912";
+  color: #59595c;
+}
