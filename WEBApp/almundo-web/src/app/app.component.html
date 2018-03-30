@@ -1,0 +1,37 @@
+<header class="header">
+  <img alt="Al mundo Logo" class="logo" src="../assets/logo-almundo.svg">
+</header>
+<main class="container">
+  <section class="filters">
+    <div class="title">
+      <h2 class="title-text" [class.active]="filterActive" (click)="toogleFilterMenu()">Filtrar</h2>
+      <h2 class="title-text--desktop">Filtros</h2>
+    </div>
+    <div>
+      <h3 class="section--title" [class.active]="filterActive" (click)="toogleFilterMenu()">Nombre de hotel</h3>
+      <input [value]="hotel" (input)="hotel = $event.target.value" placeholder="Ingrese el nombre del hotel">
+      <button name="buscar" (click)="filter()">Aceptar</button>
+    </div>
+
+    <div>
+      <h3 class="section-title" [class.active]="filterActive" (click)="toogleFilterMenu()">Estrellas</h3>
+      <input type="checkbox" [checked]="allStars" (change)="toogleAllStars(); filter()" checked/>
+      <input type="checkbox" [checked]="stars5" (change)="stars5 = !stars5; filter()" />
+      <input type="checkbox" [checked]="stars4" (change)="stars4 = !stars4; filter()" />
+      <input type="checkbox" [checked]="stars3" (change)="stars3 = !stars3; filter()" />
+      <input type="checkbox" [checked]="stars2" (change)="stars2 = !stars2; filter()" />
+      <input type="checkbox" [checked]="stars1" (change)="stars1 = !stars1; filter()" />
+    </div>
+  </section>
+  <section class="hotels">
+    <li *ngFor="let hotel of hotels">
+      <img src="../assets/hotels/{{hotel.image}}" />
+      <p> {{hotel.name}} </p>
+      <p> {{hotel.stars}} </p>
+      <p> {{hotel.amenities}}</p>
+      <p> Precio por noche habitación</p>
+      <p> {{hotel.price}}</p>
+      <button>Ver hotel</button>
+    </li>
+  </section>
+</main>

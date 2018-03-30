@@ -1,0 +1,7 @@
+.header {
+  background: linear-gradient(to bottom right, #093A7A, #0B3C7D);
+}
+
+.active {
+  height: 100%;
+}

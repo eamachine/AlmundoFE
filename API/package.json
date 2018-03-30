@@ -1,0 +1,31 @@
+{
+  "name": "almundo",
+  "version": "1.0.0",
+  "description": "FE Almundo API",
+  "main": "main.js",
+  "scripts": {
+    "test": "test",
+    "build": "babel src -s -D -d dist",
+    "start:prod": "npm run build && node dist",
+    "start:dev": "npm run build && node dist"
+  },
+  "author": "Carlos Gonzalez",
+  "license": "ISC",
+  "presets": [
+    "env"
+  ],
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "body-parser":"^1.18.2",
+    "express-restful-es6": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-decorators-legacy": "^1.0.0"
+  }
+}
